@@ -9,8 +9,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.util.Duration;
 
 public class MainScreen extends BorderPane {
-    /* ToDo get Monitor Resolution */
-
     //gameloop variables
     private Timeline gameLoop;
     private final DrawScreen center;

@@ -2,11 +2,13 @@ package javaFX.gui;
 import java.util.*;
 import javaFX.domain.Attractor;
 import javaFX.domain.Particle;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 
 public class DrawScreen extends Canvas {
 
@@ -27,8 +29,9 @@ public class DrawScreen extends Canvas {
     }
 
     private void init() {
-        this.setWidth(2560); //2560, 1440
-        this.setHeight(1440);
+        Rectangle2D screenBounds = Screen.getPrimary().getBounds();
+        this.setWidth(screenBounds.getWidth());
+        this.setHeight(screenBounds.getHeight());
         gtx = this.getGraphicsContext2D();
     }
 
