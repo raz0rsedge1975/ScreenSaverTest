@@ -2,8 +2,10 @@ package javaFX.physicsfx;
 
 import javaFX.gui.MainScreen;
 import javafx.application.Application;
-import javafx.scene.Scene;
+import javafx.geometry.Rectangle2D;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.scene.Scene;
 
 public class PhysicsFX extends Application {
 
@@ -15,6 +17,7 @@ public class PhysicsFX extends Application {
     public void start(Stage primaryStage) {
         MainScreen root = new MainScreen(this);
 
+        Rectangle2D screenBounds = Screen.getPrimary().getBounds();
         Scene scene = new Scene(root, 2560, 1440);
 
         primaryStage.setTitle("PhysX");
