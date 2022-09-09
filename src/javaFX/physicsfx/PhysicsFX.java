@@ -18,7 +18,7 @@ public class PhysicsFX extends Application {
         MainScreen root = new MainScreen(this);
 
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-        Scene scene = new Scene(root, 2560, 1440);
+        Scene scene = new Scene(root, screenBounds.getWidth(), screenBounds.getHeight());
 
         primaryStage.setTitle("PhysX");
         primaryStage.setScene(scene);
